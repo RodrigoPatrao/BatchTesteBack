@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
@@ -21,9 +22,9 @@ public class Customer implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    public Long getId() {return id;}
-    public void setId(Long id) {this.id = id;}
+    private Long id_customer;
+    public Long getId() {return id_customer;}
+    public void setId(Long id) {this.id_customer = id;}
     
     private String cpf_cnpj;
     public String getCpf_cnpj() {return cpf_cnpj;}
@@ -44,7 +45,7 @@ public class Customer implements Serializable {
     @Override
     public int hashCode() {
         int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+        hash += (id_customer != null ? id_customer.hashCode() : 0);
         return hash;
     }
 
@@ -55,7 +56,8 @@ public class Customer implements Serializable {
             return false;
         }
         Customer other = (Customer) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
+        if ((this.id_customer == null && other.id_customer != null) || 
+                (this.id_customer != null && !this.id_customer.equals(other.id_customer))) {
             return false;
         }
         return true;
@@ -63,7 +65,7 @@ public class Customer implements Serializable {
 
     @Override
     public String toString() {
-        return "com.test.valemobi.User[ id=" + id + " ]";
+        return "com.test.valemobi.User[ id=" + id_customer + " ]";
     }
 
        

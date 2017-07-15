@@ -9,7 +9,7 @@ public class dbConnect {
     static {
         emf = Persistence.createEntityManagerFactory("batchTesteBackPU");
     }
-    public EntityManager getEm(){
+    public static EntityManager getEm(){
         return emf.createEntityManager();
     }
     public static void closeEm(){
