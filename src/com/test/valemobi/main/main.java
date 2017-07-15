@@ -9,7 +9,6 @@ import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import static java.lang.Boolean.parseBoolean;
 import static java.lang.Integer.parseInt;
-import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.util.List;
 import java.util.logging.Level;
@@ -23,7 +22,7 @@ public class main {
     public static void main(String[] args) {
         EntityManager em = dbConnect.getEm();
         EntityTransaction tx = em.getTransaction();
-//        lerArquivoCSV(em, tx);
+        lerArquivoCSV(em, tx);
         executarTeste(em);
         em.close();
         dbConnect.closeEm();
