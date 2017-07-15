@@ -30,7 +30,7 @@ public class main {
     public static void lerArquivoCSV(EntityManager entity, EntityTransaction trans){
         BufferedReader br;
         try {
-            br = new BufferedReader(new InputStreamReader(new FileInputStream("dados.CSV"), "Cp1252"));
+            br = new BufferedReader(new InputStreamReader(new FileInputStream("/dados.CSV"), "Cp1252"));
             String line;
             System.out.println("Importando registros. Aguarde...");
             try {
